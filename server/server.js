@@ -6,11 +6,11 @@ import userAuthRouter from "./routes/userAuthRoutes.js";
 import adminRouter from "./routes/adminAuthRoutes.js";
 import cookieParser from "cookie-parser";
 
-const PORT = 4000;
+const PORT = 4000 || process.env.PORT;
 
 var app = express();
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["https://video-library-demo.netlify.app/"];
 
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());

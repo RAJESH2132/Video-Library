@@ -15,7 +15,7 @@ import {
 
 const userAuthRouter = express.Router();
 
-// userAuthRouter.post("/register", register);
+userAuthRouter.post("/register", register);
 userAuthRouter.post("/login", login);
 userAuthRouter.post("/logout", logout);
 userAuthRouter.get("/is-auth", userAuth, isUserAuthenticated);

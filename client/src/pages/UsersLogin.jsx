@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { AppContext } from "../context/AppContext";
 
-const AuthForm = () => {
+const UsersLogin = () => {
   const navigate = useNavigate();
   const { backendUrl, isUserLoggedin, setIsUserLoggedin } =
     useContext(AppContext);
@@ -243,4 +243,4 @@ const AuthForm = () => {
   );
 };
 
-export default AuthForm;
+export default UsersLogin;

@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import AdminLogin from "./pages/AdminLogin";
-import UserLogin from "./pages/UserLogin";
+import UsersLogin from "./pages/UsersLogin";
 import NotFound from "./components/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import VideoDescription from "./pages/VideoDesciption";
@@ -15,6 +15,7 @@ const App = () => {
   return (
     <>
       <ToastContainer />
+
       <Routes>
         {/* Home Route */}
         <Route path="/" element={<Home />} />
@@ -34,7 +35,7 @@ const App = () => {
 
         {/* User Routes */}
         <Route path="/user">
-          <Route index element={<UserLogin />} />
+          <Route index element={<UsersLogin />} />
           <Route
             path="dashboard"
             element={<ProtectedRoute element={<UserDashboard />} type="user" />}

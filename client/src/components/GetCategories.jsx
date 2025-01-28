@@ -71,6 +71,16 @@ const GetCategories = () => {
 
   // Handle Delete Button Click
   const handleDelete = async (categoryId) => {
+    // Show confirmation dialog
+    const isConfirmed = window.confirm(
+      "Are you sure you want to delete this category? This action cannot be undone."
+    );
+
+    if (!isConfirmed) {
+      return; // Cancel deletion if user clicks "Cancel"
+    }
+
+    // Proceed with deletion if confirmed
     try {
       const response = await axios.delete(
         `${backendUrl}/api/admin/delete-category/${categoryId}`

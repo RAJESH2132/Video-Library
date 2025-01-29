@@ -13,18 +13,7 @@ const app = express();
 // Define allowed origins (remove trailing slash)
 const allowedOrigins = ["https://video-library-demo.netlify.app"];
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps, Postman, etc.)
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-      return callback(new Error("Not allowed by CORS"));
-    },
-    credentials: true, // Allow credentials (cookies, headers, etc.)
-  })
-);
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

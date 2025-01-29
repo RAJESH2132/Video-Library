@@ -23,7 +23,7 @@ import {
 
 const adminRouter = express.Router();
 
-adminRouter.post("/register", register);
+// adminRouter.post("/register", register);
 adminRouter.post("/login", login);
 adminRouter.post("/logout", logout);
 

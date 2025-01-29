@@ -1,7 +1,3 @@
-Here’s the updated `README.md` with a more detailed project description at the beginning and without emojis:
-
----
-
 # Technologies Video Library
 
 ## About the Project
@@ -116,5 +112,3 @@ npm install
 ## Contributing
 
 Contributions are welcome! If you would like to contribute, feel free to submit a pull request.
-
-Let me know if you'd like any further changes.

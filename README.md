@@ -17,6 +17,7 @@
    - [Admin Routes](#admin-routes)
    - [User Routes](#user-routes)
 8. [Contributing](#contributing)
+9. [License](#license)
 
 ---
 
@@ -205,3 +206,7 @@ npm install
 ## Contributing
 
 Contributions are welcome! If you would like to contribute, feel free to submit a pull request.
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.

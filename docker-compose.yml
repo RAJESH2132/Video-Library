@@ -1,0 +1,20 @@
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80" # Expose frontend on port 5173 (inside container and externally)
+    env_file:
+      - ./client/.env
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000" # Expose backend on port 4000 (inside container and externally)
+    env_file:
+      - ./server/.env

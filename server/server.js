@@ -11,7 +11,10 @@ const PORT = process.env.PORT || 4000; // Fix: Use process.env.PORT first, fallb
 const app = express();
 
 // Define allowed origins (remove trailing slash)
-const allowedOrigins = ["https://video-library-demo.netlify.app"];
+const allowedOrigins = [
+  "https://video-library-demo.netlify.app",
+  "http://localhost:5173",
+];
 
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 

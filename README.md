@@ -13,11 +13,8 @@
    - [Docker Setup](#3-docker-setup)
    - [Backend Setup (Without Docker)](#4-backend-setup-without-docker)
    - [Frontend Setup (Without Docker)](#5-frontend-setup-without-docker)
-7. [API Endpoints](#api-endpoints)
-   - [Admin Routes](#admin-routes)
-   - [User Routes](#user-routes)
-8. [Contributing](#contributing)
-9. [License](#license)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ---
 
@@ -114,6 +111,7 @@ Before setting up either Docker or the local environment, create the necessary `
     ```
 
 - **For the Frontend:**
+
   - Navigate to the `client` directory and create a `.env` file with the following content:
     ```
     VITE_BACKEND_URL=http://localhost:4000
@@ -130,6 +128,7 @@ To run the application using Docker, follow these steps:
   ```
 
 - **Run the Docker containers:**
+
   ```sh
   docker-compose up
   ```
@@ -147,6 +146,7 @@ npm install
 
 - Create a `.env` file in the `server` directory (as mentioned above).
 - Start the backend:
+
   ```sh
   npm run dev
   ```
@@ -160,46 +160,10 @@ npm install
 
 - Create a `.env` file in the `client` directory (as mentioned above).
 - Start the frontend:
+
   ```sh
   npm run dev
   ```
-
----
-
-## API Endpoints
-
-### Admin Routes
-
-| Method | Endpoint                                 | Description                     |
-| ------ | ---------------------------------------- | ------------------------------- |
-| POST   | `/api/admin/login`                       | Admin login                     |
-| POST   | `/api/admin/logout`                      | Admin logout                    |
-| GET    | `/api/admin/is-auth`                     | Check if admin is authenticated |
-| POST   | `/api/admin/add-category`                | Add a new category              |
-| POST   | `/api/admin/add-video`                   | Add a new video                 |
-| GET    | `/api/admin/get-users`                   | Get all users                   |
-| GET    | `/api/admin/get-user/:userId`            | Get user by ID                  |
-| GET    | `/api/admin/get-videos`                  | Get all videos                  |
-| GET    | `/api/admin/get-categories`              | Get all categories              |
-| GET    | `/api/admin/get-video/:videoId`          | Get video by ID                 |
-| GET    | `/api/admin/filter-videos/:categoryId`   | Filter videos by category       |
-| DELETE | `/api/admin/delete-video/:videoId`       | Delete video by ID              |
-| DELETE | `/api/admin/delete-category/:categoryId` | Delete category by ID           |
-| PUT    | `/api/admin/edit-category/:categoryId`   | Edit category by ID             |
-| PUT    | `/api/admin/edit-video/:videoId`         | Edit video by ID                |
-
-### User Routes
-
-| Method | Endpoint                              | Description                    |
-| ------ | ------------------------------------- | ------------------------------ |
-| POST   | `/api/user/register`                  | User registration              |
-| POST   | `/api/user/login`                     | User login                     |
-| POST   | `/api/user/logout`                    | User logout                    |
-| GET    | `/api/user/is-auth`                   | Check if user is authenticated |
-| GET    | `/api/user/get-videos`                | Get all videos                 |
-| GET    | `/api/user/get-categories`            | Get all categories             |
-| GET    | `/api/user/get-video/:videoId`        | Get video by ID                |
-| GET    | `/api/user/filter-videos/:categoryId` | Filter videos by category      |
 
 ---
 
